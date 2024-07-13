@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+        <form id="sign-up-form" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+					<label for="chk" aria-hidden="true">Add account</label>
+          <input
+          type="text"
+          placeholder="Name"
+          name="username"
+          required
+          ngModel
+          #name="ngModel"
+        />
+        <input
+        type="email"
+        Email
+        placeholder="Email"
+        name="email"
+        ngModel
+        #email="ngModel"
+        required
+      />
+      <input
+        placeholder="PhoneNumber"
+        name="number"
+        required
+        ngModel
+        #phonenumber="ngModel"
+      />
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        ngModel
+        #password="ngModel"
+        required
+      />
+      <button class="btn btn-primary"   type="submit">Add</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label (click)="gotousehome()" aria-hidden="true">Main</label>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
